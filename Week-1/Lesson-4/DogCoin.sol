@@ -44,11 +44,7 @@ contract DogCoin{
         balances[ReceiverAddress]+=amount;
         balances[msg.sender]-=amount;
 
-        Payment memory AddTrasaction;
-        AddTrasaction.transferAmount=amount;
-        AddTrasaction.recipientAddress=ReceiverAddress;
-
-        UserPaymentArray[msg.sender].push(AddTrasaction);
+        UserPaymentArray[msg.sender].push(Payment({transferAmount:amount,recipientAddress:ReceiverAddress}));
 
         emit TransferSucess(amount,ReceiverAddress);
     }      
