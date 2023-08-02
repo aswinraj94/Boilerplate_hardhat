@@ -1,1 +1,1 @@
-# Encode-BNB-Zero2Hero-BootCamp
+# Boilerplate_Hardhat
